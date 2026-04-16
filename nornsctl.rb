@@ -5,21 +5,21 @@
 class Nornsctl < Formula
   desc "CLI for the Norns durable agent runtime"
   homepage "https://github.com/amackera/nornsctl"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/amackera/nornsctl/releases/download/v0.2.0/nornsctl_darwin_amd64.tar.gz"
-      sha256 "6e2e8b6feb90f05253f2f655fa7e541aa866211cf2e3a8abf05864a4e79ecda8"
+      url "https://github.com/amackera/nornsctl/releases/download/v0.2.1/nornsctl_darwin_amd64.tar.gz"
+      sha256 "b78dc0e66bb12b81001d56d272295f61e4940cc3c6592706d6bbbcc9a3a36d50"
 
       define_method(:install) do
         bin.install "nornsctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/amackera/nornsctl/releases/download/v0.2.0/nornsctl_darwin_arm64.tar.gz"
-      sha256 "0db067d5302d11a57c3ce46e0f732d7892cc5c1b33e909b92304b76c83b5b63c"
+      url "https://github.com/amackera/nornsctl/releases/download/v0.2.1/nornsctl_darwin_arm64.tar.gz"
+      sha256 "3ff4b234d39c32a013af773b8c502ddefe17ea0c56390ee96ac595809b89fa45"
 
       define_method(:install) do
         bin.install "nornsctl"
@@ -29,15 +29,15 @@ class Nornsctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/amackera/nornsctl/releases/download/v0.2.0/nornsctl_linux_amd64.tar.gz"
-      sha256 "88740d001f5bda8cc95bd7968c93da2e98e822d4f9845287615aaa15328b1bd0"
+      url "https://github.com/amackera/nornsctl/releases/download/v0.2.1/nornsctl_linux_amd64.tar.gz"
+      sha256 "ad911690f09b16e974771bb86a99011bc1b9cd9be993cd24435eb6a514bb44aa"
       define_method(:install) do
         bin.install "nornsctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/amackera/nornsctl/releases/download/v0.2.0/nornsctl_linux_arm64.tar.gz"
-      sha256 "91fd47f82767fad01bef0a975c57acb858dd9e614bd7607d5814e44353ad49ee"
+      url "https://github.com/amackera/nornsctl/releases/download/v0.2.1/nornsctl_linux_arm64.tar.gz"
+      sha256 "6b966c695485d61f9e3b554ee4f7a6e586d3d936f04c60a8f0919005d744d1da"
       define_method(:install) do
         bin.install "nornsctl"
       end
